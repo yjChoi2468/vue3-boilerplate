@@ -19,5 +19,10 @@ module.exports = {
         PROJECT_BUILD_DATE: JSON.stringify(new Date().toISOString()),
       }),
     ],
+    optimization: {
+      splitChunks: {
+        chunks: "all",
+      },
+    },
   },
 };
