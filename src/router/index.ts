@@ -1,11 +1,6 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  NavigationFailure,
-  NavigationGuardNext,
-  RouteLocationNormalized,
-} from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import { errorRoutes } from "./errorRoutes";
+import { afterEachGuard, beforeEachGuard } from "./guard";
 import { homeRoutes } from "./homeRoutes";
 import { loginRoutes } from "./loginRoutes";
 
@@ -22,14 +17,7 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) => {
-  // 라우팅 전
-  // 권한 검사 - store
-  return next();
-});
-
-router.afterEach((to: RouteLocationNormalized, from: RouteLocationNormalized, failure?: NavigationFailure | void) => {
-  // 라우팅 후
-});
+router.beforeEach(beforeEachGuard);
+router.afterEach(afterEachGuard);
 
 export default router;

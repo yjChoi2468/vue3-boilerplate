@@ -1,5 +1,5 @@
 import { RouteRecordRaw } from "vue-router";
-import { lazyLoadView } from "./helper";
+import { lazyLoadView } from "./util/helper";
 
 export const errorRoutes: Array<RouteRecordRaw> = [
   {

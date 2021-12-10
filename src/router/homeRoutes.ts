@@ -1,6 +1,6 @@
 import { PERMISSION_TYPE } from "@/constants/permission.constants";
 import { RouteRecordRaw } from "vue-router";
-import { lazyLoadView } from "./helper";
+import { lazyLoadView } from "./util/helper";
 
 export const homeRoutes: Array<RouteRecordRaw> = [
   {
