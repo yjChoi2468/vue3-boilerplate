@@ -1,13 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <h1>권한이 없는 페이지입니다.</h1>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "About",
+  name: "Error403",
 });
 </script>
+
+<style></style>

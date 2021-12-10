@@ -1,13 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <h1>페이지를 찾을 수 없습니다.</h1>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "About",
+  name: "Error404",
 });
 </script>
+
+<style></style>

@@ -1,7 +1,8 @@
+import { PERMISSION_TYPE } from "@/constants/permission.constants";
 import { RouteRecordRaw } from "vue-router";
 import { lazyLoadView } from "./helper";
 
-export const homeRouter: Array<RouteRecordRaw> = [
+export const homeRoutes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
@@ -11,5 +12,8 @@ export const homeRouter: Array<RouteRecordRaw> = [
     path: "/about",
     name: "About",
     component: () => lazyLoadView("About"),
+    meta: {
+      permission: PERMISSION_TYPE.ADMIN,
+    },
   },
 ];
