@@ -6,4 +6,5 @@ export const afterEachGuard = (
   failure?: NavigationFailure | void
 ) => {
   // 라우팅 후
+  // send google analytics
 };
